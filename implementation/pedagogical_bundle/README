@@ -1,0 +1,9 @@
+
+The purpose of the included code is to provide a working example of bundle adjustment, the non-linear minimization of the reprojection error used in structure-from-motion.
+
+Examples of both projective and Euclidian bundle adjustments are provided. The minimisation is done on synthetic data.
+
+Suggested starting points are the files proj_bundle_demo.m and eucl_bundle_demo.m
+
+
+

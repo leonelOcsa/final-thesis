@@ -1,0 +1,25 @@
+function err = err_eucl(mot_vec, args)
+
+  
+  m = args.m;
+  n = args.n;
+  imgs = args.imgs;
+  str = args.str;
+  intrinsics = args.focals;
+
+  mot = vec_to_mot_tuples(mot_vec, args.parameterisation) ;
+  
+  err=[];
+  
+#keyboard
+for i=1:m,
+
+    pt_indices = imgs{i}(1,:);
+
+    K = [focals(i) 0 0; 0 focals(i) 0; 0 0 1];
+%keyboard
+    imgs{i}(2:4,:)-pflat(K*mot_to_proj_mat(mot{i})*str(:, pt_indices)); ans(1:2,:);
+    
+    err = [err; ans(:)];
+    
+  end    

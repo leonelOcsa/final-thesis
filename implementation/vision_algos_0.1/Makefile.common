@@ -1,0 +1,3 @@
+OCTAVE_INCLUDE_PATH=/usr/include/octave
+OCTAVE_LIB_PATH=/usr/lib/octave-3.0.1
+CC=g++
